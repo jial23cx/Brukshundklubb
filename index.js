@@ -61,13 +61,11 @@ checkLoggedIn();
 //Skapar en ny div i HTML i "loggedIn" div:n
 function newDiv(){
 
-        var divContainer=document.createElement("div"); //skapa div element med namnet divVontainer
-
-        var divNamnText=document.createTextNode("Välkommen");//skapa text node med värdet av "namn"
-             divContainer.appendChild(divNamnText);//placera divNamnText som child till divContainer
-        
-        var loggedInDiv=document.getElementById("loggedIn");//placeringen av välkommen i HTML sidan
-                loggedInDiv.appendChild(divContainer); //Placerar divContainer i loggedInDiv som är kopplat till id loggedIn i HTML
+        var divContainer=document.createElement("div"); 
+        var divNamnText=document.createTextNode("Välkommen");
+             divContainer.appendChild(divNamnText);
+        var loggedInDiv=document.getElementById("loggedIn");
+                loggedInDiv.appendChild(divContainer); 
                 divContainer.classList.add("redBackground");
                 
     console.log(divNamnText);
@@ -89,7 +87,7 @@ document.body.innerHTML="";
 
 }
 
-//lägga till eventListener till logOffButton osm skapades ovanför.
+//lägga till eventListener till logOffButton som skapades ovanför.
 logOffBtn.addEventListener("click", function(){
 localStorage.removeItem("isLoggedIn" );
 clear();
